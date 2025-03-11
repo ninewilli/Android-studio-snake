@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- res/drawable/btn_cartoon.xml 按钮背景 -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <shape>
+            <gradient android:startColor="#FF6B6B"
+            android:endColor="#FF8E8E"
+            android:angle="270"/>
+            <corners android:radius="25dp"/>
+            <stroke android:width="2dp"
+                android:color="#FFFFFF"/>
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <gradient android:startColor="#FF9F4A"
+            android:endColor="#FFD93D"
+            android:angle="270"/>
+            <corners android:radius="25dp"/>
+            <stroke android:width="2dp"
+                android:color="#FFFFFF"/>
+        </shape>
+    </item>
+</selector>

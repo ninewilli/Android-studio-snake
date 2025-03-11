@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<!--    由于需要悬浮显示分数，所以不再使用线性布局而是相对布局-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_blue_dark"
+        android:layout_above="@+id/ll_bottom"
+        android:padding="6dp">
+
+
+        <SurfaceView
+            android:id="@+id/sv_game"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/tv_score"
+            android:layout_width="55dp"
+            android:layout_height="61dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="21dp"
+            android:text="            0"
+            android:textColor="#ffffff"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+<!--操作按钮分3排，中间一排是左右按钮，上下则是上下按钮-->
+    <LinearLayout
+        android:id="@+id/ll_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:background="@drawable/bg_cartoon_panel"
+        android:orientation="vertical"
+        android:paddingTop="15dp"
+        android:paddingBottom="20dp">
+
+        <!-- 上方向按钮 (云朵形状) -->
+        <Button
+            android:id="@+id/btn_up"
+            android:layout_width="184dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/bg_cartoon_panel"
+            android:elevation="8dp"
+            android:text="☁️"
+            android:textColor="#FFFFFF"
+            android:textSize="40sp" />
+
+        <LinearLayout
+            android:layout_width="450dp"
+            android:layout_height="68dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingHorizontal="20dp">
+
+            <!-- 左方向按钮 (卡通箭头) -->
+            <Button
+                android:id="@+id/btn_left"
+                android:layout_width="173dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/bg_cartoon_panel"
+                android:text="◀️"
+                android:textColor="#FFFFFF"
+                android:textSize="45sp" />
+
+            <!-- 右方向按钮 (动态箭头) -->
+            <Button
+                android:id="@+id/btn_right"
+                android:layout_width="172dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/bg_cartoon_panel"
+                android:text="▶️"
+                android:textColor="#FFFFFF"
+                android:textSize="45sp" />
+        </LinearLayout>
+
+        <!-- 下方向按钮 (花朵图标) -->
+        <Button
+            android:id="@+id/btn_down"
+            android:layout_width="183dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_cartoon_panel"
+            android:elevation="8dp"
+            android:text="🌸"
+            android:textColor="#FFFFFF"
+            android:textSize="40sp" />
+    </LinearLayout>
+
+
+</RelativeLayout>
